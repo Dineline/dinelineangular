@@ -1,0 +1,221 @@
+<div class="container-fluid page-body-wrapper">
+  <!-- partial:partials/_settings-panel.html -->
+  <!-- partial -->
+  <!-- partial:partials/_sidebar.html -->
+
+<app-sidebar></app-sidebar>
+
+
+  <!-- partial -->
+  <div class="main-panel">
+<div class="content-wrapper container">
+
+
+  <div class="row">
+    <div class="col-md-4 col-6 grid-margin">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="mdi mdi-facebook-messenger text-facebook icon-md"></i>
+          <div class="d-flex flex-row align-items-top">
+            <div class="w-100 e">
+              <h6 class="text-facebook">messanger</h6>
+              <h2 class="mt-2 card-text">{{ main_data['messanger'] }}</h2>
+              <p class="mt-2 text-muted card-text">Contact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-6 grid-margin">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="mdi mdi-google text-youtube icon-md"></i>
+          <div class="d-flex flex-row align-items-top">
+            <div class="w-100 e">
+              <h6 class="text-youtube">Google</h6>
+              <h2 class="mt-2 card-text">{{ main_data['google'] }}</h2>
+              <p class="mt-2 text-muted card-text">Contact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 col-6 grid-margin">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="mdi mdi-instagram text-youtube icon-md"></i>
+          <div class="d-flex flex-row align-items-top">
+            <div class="w-100 e">
+              <h6 class="text-youtube">Instagram</h6>
+              <h2 class="mt-2 card-text">{{ main_data['instagram'] }}</h2>
+              <p class="mt-2 text-muted card-text">Contact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-6 grid-margin">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="mdi mdi-cellphone text-facebook icon-md"></i>
+          <div class="d-flex flex-row align-items-top">
+            <div class="w-100 e">
+              <h6 class="text-facebook">SMS</h6>
+              <h2 class="mt-2 card-text">{{ main_data['sms'] }}</h2>
+              <p class="mt-2 text-muted card-text">Contact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-12 grid-margin">
+      <div class="card">
+        <div class="card-body text-center">
+          <i class="mdi mdi-comment-text text-twitter icon-md"></i>
+          <div class="d-flex flex-row align-items-top">
+            <div class="w-100 e">
+              <h6 class="text-twitter">WebChat</h6>
+              <h2 class="mt-2 card-text">{{ main_data['webchat'] }}</h2>
+              <p class="mt-2 text-muted card-text">Contact</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 grid-margin">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-row align-items-top">
+            <i class="mdi mdi-glassdoor text-facebook icon-md"></i>
+            <div class="ml-3">
+              <h6 class="text-facebook">Success</h6>
+              <h2 class="mt-2 card-text">{{ main_data['success'].toFixed(2) }}%</h2>
+              <p class="mt-2 text-muted card-text">Rate</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-4 grid-margin">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-row align-items-top">
+            <i class="mdi mdi-blur text-twitter icon-md"></i>
+            <div class="ml-3">
+              <h6 class="text-twitter">Total Messages</h6>
+              <h2 class="mt-2 card-text">{{ main_data['total_messages'] }}</h2>
+
+              <p class="mt-2 text-muted card-text">You main list growing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4 grid-margin">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-row align-items-top">
+
+            <i class="mdi mdi-blur-off text-youtube icon-md"></i>
+            <div class="ml-3">
+              <h6 class="text-youtube">Total Mistakes</h6>
+              <h2 class="mt-2 card-text">{{ main_data['mistakes'] }}</h2>
+              <p class="mt-2 text-muted card-text">You main list growing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-12 grid-margin">
+      <div class="card">
+        <div class="card-body">
+          <div class="d-flex flex-row align-items-top">
+            <i class="mdi mdi-blur text-twitter icon-md"></i>
+            <div class="ml-3">
+              <h6 class="text-twitter">Total Corrects</h6>
+              <h2 class="mt-2 card-text">{{ main_data['correct'] }}</h2>
+
+              <p class="mt-2 text-muted card-text">You main list growing</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6 grid-margin grid-margin-md-0 stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title text-center">Top Intents</h4>
+          <div class="table-responsive mt-3">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th class="pt-1 pl-0">
+                    Intent Name
+                  </th>
+                  <th class="pt-1">
+                    Count
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let intent_data of intent_data; index as i;">
+                  <td class="py-1 pl-0">
+                    <div class="d-flex align-items-center">
+                      <div class="ml-3">
+                        <p class="mb-2">{{ intent_data['intent_name'] }}</p>
+                        <!-- <p class="mb-0 text-muted text-small">Product Designer</p> -->
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    {{ intent_data['counter'] }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 grid-margin grid-margin-md-0 stretch-card">
+      <div class="card">
+        <div class="card-body">
+          <h4 class="card-title text-center">Feedback Rating</h4>
+          <div class="table-responsive mt-3">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="pt-1 pl-0">
+                    Message
+                  </th>
+                  <th class="pt-1">
+                    Rating
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr *ngFor="let feedback_data of feedback_data; index as i;">
+                  <td class="py-1 pl-0">
+                    <div class="d-flex align-items-center">
+                      <div class="ml-3">
+                        <p class="mb-2">{{ feedback_data['message'] }}</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td>
+                    {{ feedback_data['smiley'] }}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>

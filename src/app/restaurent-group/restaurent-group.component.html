@@ -1,0 +1,397 @@
+<div class="container-fluid page-body-wrapper">
+  <!-- partial:partials/_settings-panel.html -->
+  <!-- partial -->
+  <!-- partial:partials/_sidebar.html -->
+
+<app-sidebar></app-sidebar>
+
+
+  <!-- partial -->
+  <div class="main-panel">
+  <div class="content-wrapper container">
+    <div class="row mt-3">
+      <div class="w-100">
+        <h3>Restaurent Group Analytics</h3>
+        <p>Row id: 16</p>
+        <p class="float-right">Data: 20-02-2022</p>
+      </div>
+
+      <div class="col-md-6 col-lg-6 col-xl-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="icon-wrap">
+                <i class="mdi mdi-folder-outline"></i>
+              </div>
+              <div class="flex-right-height">
+                <p class="font-weight-bold mb-1"> Impressions
+                </p>
+                <h2>{{ restaurent_data['impressions'] }}</h2>
+                <!-- <p class="font-weight-medium p-0"><span class="text-success mr-2">+1.2%</span><span>Last month</span></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="icon-wrap">
+                <i class="mdi mdi-clipboard-text"></i>
+              </div>
+              <div class="flex-right-height">
+                <p class="font-weight-bold mb-1"> Clicks And engagement</p>
+                <h2>{{ restaurent_data['interactions'] }}</h2>
+                <!-- <p class="font-weight-medium p-0"><span class="text-success mr-2">+1.2%</span><span>growth</span></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="icon-wrap">
+                <i class="mdi mdi-clipboard-text"></i>
+              </div>
+              <div class="flex-right-height">
+                <p class="font-weight-bold mb-1"> Store Visits</p>
+                <h2>{{ convert_add(restaurent_data['store_visits_VT'],restaurent_data['store_visits']) }}</h2>
+                <!-- <p class="font-weight-medium p-0"><span class="text-success mr-2">+1.2%</span><span>growth</span></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="icon-wrap">
+                <i class="mdi mdi-clipboard-text"></i>
+              </div>
+              <div class="flex-right-height">
+                <p class="font-weight-bold mb-1">Clicks</p>
+                <h2>{{ restaurent_data['clicks'] }}</h2>
+                <!-- <p class="font-weight-medium p-0"><span class="text-success mr-2">+1.2%</span><span>growth</span></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="icon-wrap">
+                <i class="mdi mdi-file-document"></i>
+              </div>
+              <div class="flex-right-height">
+                <p class="font-weight-bold mb-1"> Cost Of Acquisition
+                </p>
+                <h2>{{ restaurent_data['cost_per_conversion'] }}</h2>
+                <!-- <p class="font-weight-medium p-0"><span class="text-success mr-2">+1.2%</span><span>growth</span></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-6 col-xl-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="icon-wrap">
+                <i class="mdi mdi-account-outline"></i>
+              </div>
+              <div class="flex-right-height">
+                <p class="font-weight-bold mb-1"> Ads Spent</p>
+                <h2>{{ restaurent_data['amount_spent'] }}</h2>
+                <!-- <p class="font-weight-medium p-0"><span class="text-success mr-2">+1.2%</span><span>loss</span></p> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="row">
+      <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Sales Today</h4>
+           <h2>2.562</h2>
+           <p class="font-weight-medium"><span class="text-success mr-2">8.35% </span>More earnings than usual</p>
+           <div class="dashboard-chart-height mt-4">
+             <canvas id="sales-today"></canvas>
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Pending Orders</h4>
+           <h2>1389</h2>
+           <p class="font-weight-medium"><span class="text-danger mr-2">-4.25%  </span>Less orders than usual</p>
+           <div class="dashboard-chart-height mt-4">
+             <canvas id="pending-order"></canvas>
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Visitors Today</h4>
+           <h2>17.212</h2>
+           <p class="font-weight-medium"><span class="text-success mr-2">5.50%  </span> More visitors than usual</p>
+           <div class="dashboard-chart-height mt-4">
+             <canvas id="visitors-today"></canvas>
+           </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 col-lg-3 grid-margin stretch-card">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">Total Earnings</h4>
+           <h2>$24.300</h2>
+           <p class="font-weight-medium"><span class="text-success mr-2">8.35% </span> More earnings than usual</p>
+           <div class="dashboard-chart-height mt-4">
+             <canvas id="total-earnings"></canvas>
+           </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <div class="row mt-5" *ngFor="let location_data of location_data; index as i; first as isFirst">
+      <div class="w-100">
+        <h3>{{ location_data['shope_name'] }}</h3>
+        <h6>{{ location_data['shop_address'] }}</h6>
+        <div class="float-right">
+          <p>Row id: {{ location_data['id'] }}</p>
+          <p>Data: {{ location_data['created_at'] }}</p>
+        </div>
+      </div>
+
+      <div class="col-md-12 grid-margin-0 grid-margin-lg">
+        <div class="row">
+          <div class="col-12 col-sm-6 col-md-6 grid-margin stretch-card" *ngIf="show==true">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Impressions</h4>
+                <div class="w-100 text-center">
+
+                  <h1 class="">{{ location_data['local_reach'] }}</h1>
+                </div>
+                <div class="d-flex justify-content-between p-3">
+                  <!-- <p class="text-muted">Avg. Session</p>
+                  <p class="text-muted">max: 143</p> -->
+                </div>
+                <div class="progress progress-md">
+                  <div class="progress-bar bg-warning w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-sm-6 col-md-6 grid-margin stretch-card" *ngIf="show==true">
+            <div class="card">
+              <div class="card-body">
+                <h4 class="card-title">Store Visits</h4>
+                <div class="w-100 text-center">
+
+                  <h1 class="">{{ add(location_data['shop_visits'],location_data['shopvisitsVT']) }}</h1>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="text-muted">Clicks</p>
+                  <p class="text-muted">{{ location_data['shop_visits'] }}</p>
+                </div>
+                <div class="d-flex justify-content-between">
+                  <p class="text-muted">Views</p>
+                  <p class="text-muted">{{ location_data['shopvisitsVT'] }}</p>
+                </div>
+                <div class="progress progress-md">
+                  <div class="progress-bar bg-warning w-25" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-xl-6 grid-margin">
+            <owl-carousel-o [options]="customOptions">
+              <ng-template carouselSlide>
+                <div class="card">
+                  <div class="card">
+                    <div class="card-body p-0 text-center">
+                      <div class="row">
+                        <div class="col-sm-12">
+                          <h4 class="card-title p-4">Calls
+                          </h4>
+                          <div class="border-horizontal mb-3"></div>
+                          <h2>{{ add(location_data['call_click'],location_data['callclickVT']) }}</h2>
+                          <p>Total</p>
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-5">
+                                <!-- <p class="text-small">2.09% (30 days)</p> -->
+                                <h3 class="text-info">{{ location_data['call_click'] }}</h3>
+                                <p class="text-small font-weight-medium">Clicks</p>
+                              </div>
+                              <div class="col-2 text-center"><div class="border-vertical"></div></div>
+                              <div class="col-5">
+                                <!-- <p class="text-small">0.51% (30 days)</p> -->
+                                <h3 class="text-info">{{ location_data['callclickVT'] }}</h3>
+                                <p class="text-small font-weight-medium">Views</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="card">
+                  <div class="card">
+                    <div class="card-body p-0 text-center">
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="card-title p-4">Maps
+                          </h4>
+                          <div class="border-horizontal mb-3"></div>
+                          <h2>{{ add(location_data['drivingdirectionsVT'],location_data['driving_directions']) }}</h2>
+                          <p>Total</p>
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-5 w-45">
+                                <!-- <p class="text-small">2.09% (30 days)</p> -->
+                                <h3 class="text-info">{{ location_data['driving_directions'] }}</h3>
+                                <p class="text-small font-weight-medium">Clicks</p>
+                              </div>
+                              <div class="col-2 w-10 text-center"><div class="border-vertical"></div></div>
+                              <div class="col-5 w-45">
+                                <!-- <p class="text-small">0.51% (30 days)</p> -->
+                                <h3 class="text-info">{{ location_data['drivingdirectionsVT'] }}</h3>
+                                <p class="text-small font-weight-medium">Views</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="card">
+                  <div class="card">
+                    <div class="card-body p-0 text-center">
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="card-title p-4">Websites
+                          </h4>
+                          <div class="border-horizontal mb-3"></div>
+                          <h2>{{ add(location_data['website_visits'],location_data['websitevisitsVT']) }}</h2>
+                          <p>Total</p>
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-5">
+                                <!-- <p class="text-small">2.09% (30 days)</p> -->
+                                <h3 class="text-info">{{ location_data['website_visits'] }}</h3>
+                                <p class="text-small font-weight-medium">Clicks</p>
+                              </div>
+                              <div class="col-2 text-center"><div class="border-vertical"></div></div>
+                              <div class="col-5">
+                                <!-- <p class="text-small">0.51% (30 days)</p> -->
+                                <h3 class="text-info">{{ location_data['websitevisitsVT'] }}</h3>
+                                <p class="text-small font-weight-medium">Views</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="card">
+                  <div class="card">
+                    <div class="card-body p-0 text-center">
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="card-title p-4">Menu
+                          </h4>
+                          <div class="border-horizontal mb-3"></div>
+                          <h2>{{ add(location_data['menu'],location_data['menuVT']) }}</h2>
+                          <p>Total</p>
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-5">
+                                <!-- <p class="text-small">2.09% (30 days)</p> -->
+                                <h3 class="text-info">{{ location_data['menu'] }}</h3>
+                                <p class="text-small font-weight-medium">Clicks</p>
+                              </div>
+                              <div class="col-2 text-center"><div class="border-vertical"></div></div>
+                              <div class="col-5">
+                                <!-- <p class="text-small">0.51% (30 days)</p> -->
+                                <h3 class="text-info">{{ location_data['menuVT'] }}</h3>
+                                <p class="text-small font-weight-medium">Views</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template carouselSlide>
+                <div class="card">
+                  <div class="card">
+                    <div class="card-body p-0 text-center">
+                      <div class="row">
+                        <div class="col-12">
+                          <h4 class="card-title p-4">Orders
+                          </h4>
+                          <div class="border-horizontal mb-3"></div>
+                          <h2>{{ add(location_data['orders'],location_data['ordersVT']) }}</h2>
+                          <p>Total</p>
+                          <div class="card-body">
+                            <div class="row">
+                              <div class="col-5">
+                                <!-- <p class="text-small">2.09% (30 days)</p> -->
+                                <h3 class="text-info">{{ location_data['orders'] }}</h3>
+                                <p class="text-small font-weight-medium">Clicks</p>
+                              </div>
+                              <div class="col-2 text-center"><div class="border-vertical"></div></div>
+                              <div class="col-5">
+                                <!-- <p class="text-small">0.51% (30 days)</p> -->
+                                <h3 class="text-info">{{ location_data['ordersVT'] }}</h3>
+                                <p class="text-small font-weight-medium">Views</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </ng-template>
+            </owl-carousel-o>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- content-wrapper ends -->
+  <!-- partial:partials/_footer.html -->
+
+
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>

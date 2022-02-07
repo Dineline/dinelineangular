@@ -1,0 +1,51 @@
+<nav class="sidebar sidebar-offcanvas" id="sidebar" #sidebar1>
+  <ul class="nav">
+    <li class="nav-item p-5">
+      <!-- <a class="navbar-brand brand-logo-mini" href="index.html"><img src="../assets/images/logo-mini.svg" alt="logo"/></a>
+      <a class="navbar-brand brand-logo" href="index.html"><img src="../assets/images/logo.svg" alt="logo"/></a> -->
+    </li>
+    <li class="nav-item">
+      <div class="menu-heading mt-0">MAIN MENU</div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/restaurent_group/'+loc_id]">
+        <i class="mdi mdi-locker-multiple menu-icon"></i>
+        <span class="menu-title" >Dashboard</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/restaurent_group/'+loc_id]">
+        <i class="mdi mdi-airplay menu-icon"></i>
+        <span class="menu-title">Restaurent Group</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/Location/'+loc_id]">
+        <i class="mdi mdi-airplay menu-icon"></i>
+        <span class="menu-title">Location Analytics</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#apps" aria-expanded="false" aria-controls="apps">
+        <i class="mdi mdi-television menu-icon"></i>
+        <span class="menu-title">Blasts</span>
+        <i class="menu-arrow"></i>
+      </a>
+      <div class="collapse" id="apps">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item" *ngFor="let balst_menu of balst_menu; index as i;">
+            <a class="nav-link" [routerLink]="['/blasts/'+loc_id+'/'+balst_menu['id']]">{{ balst_menu['campaign_name'] }}</a>
+          </li>
+
+        </ul>
+      </div>
+    </li>
+
+    <li class="nav-item">
+      <a class="nav-link" [routerLink]="['/dani/'+loc_id]">
+        <i class="mdi mdi-airplay menu-icon"></i>
+        <span class="menu-title">Dani Dashboard</span>
+      </a>
+    </li>
+  </ul>
+</nav>
